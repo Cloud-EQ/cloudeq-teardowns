@@ -8,6 +8,30 @@ window.SITE_DATA = {
  },
  "articles": [
   {
+   "slug": "2026-10-10-lumen-grid-energy-q3-2026",
+   "title": "Lumen Grid Energy: Q3 2026 Financial Breakdown",
+   "date": "2026-10-10",
+   "company": "Lumen Grid Energy",
+   "ticker": "LGE",
+   "sector": "Energy",
+   "tags": [
+    "earnings",
+    "utilities",
+    "cash-flow"
+   ],
+   "summary": "Renewables grew 37% and lifted operating margin to 18.8%, while heavy grid spending kept free cash flow modest.",
+   "author": "",
+   "metrics": {
+    "revenue": "$1.84B",
+    "revenue_growth": "+10.8%",
+    "operating_margin": "18.8%",
+    "net_income": "$182M",
+    "free_cash_flow": "$230M"
+   },
+   "minutes": 2,
+   "body": "> **Sample article #2.** Lumen Grid Energy is a made-up company and all numbers are invented to test the site. Delete this file when you publish real articles.\n\n## Overview\n\nLumen Grid had a solid third quarter. Revenue rose 10.8% to $1.84 billion, with the renewables business doing most of the work. Profit grew faster than sales, but the company is spending heavily on grid upgrades, so only part of the extra cash reaches shareholders.\n\n## Revenue\n\nRegulated utilities, the stable core, grew 6.7%. Renewables jumped 36.8% on new solar capacity coming online. Services shrank 13.0% as the company exited some low-margin contracts.\n\n| Segment | Q3 2025 ($B) | Q3 2026 ($B) | Change |\n|---|---:|---:|---:|\n| Regulated utilities | 1.05 | 1.12 | +6.7% |\n| Renewables | 0.38 | 0.52 | +36.8% |\n| Services | 0.23 | 0.20 | -13.0% |\n| **Total** | **1.66** | **1.84** | **+10.8%** |\n\n```chart\n{\n  \"type\": \"bar\",\n  \"title\": \"Revenue by segment\",\n  \"unit\": \"$B\",\n  \"labels\": [\"Regulated utilities\", \"Renewables\", \"Services\"],\n  \"series\": [\n    { \"name\": \"Q3 2025\", \"values\": [1.05, 0.38, 0.23] },\n    { \"name\": \"Q3 2026\", \"values\": [1.12, 0.52, 0.20] }\n  ],\n  \"source\": \"Illustrative data for a fictional company\"\n}\n```\n\nGrowth has been steady rather than lumpy, which is what investors tend to like in a utility.\n\n```chart\n{\n  \"type\": \"line\",\n  \"title\": \"Revenue, last five quarters\",\n  \"unit\": \"$B\",\n  \"labels\": [\"Q3 25\", \"Q4 25\", \"Q1 26\", \"Q2 26\", \"Q3 26\"],\n  \"series\": [\n    { \"name\": \"Revenue\", \"values\": [1.66, 1.71, 1.74, 1.79, 1.84] }\n  ],\n  \"source\": \"Illustrative data for a fictional company\"\n}\n```\n\n## Profitability\n\nOperating income rose 15.8% to $345 million, lifting the margin from 18.0% to 18.8%. The shift toward renewables, which earn higher margins than the services work being wound down, explains most of the gain.\n\n| Metric | Q3 2025 | Q3 2026 | Change |\n|---|---:|---:|---:|\n| Operating income | $298M | $345M | +15.8% |\n| Operating margin | 18.0% | 18.8% | +0.8 pts |\n| Net income | $161M | $182M | +13.0% |\n\n## Cash flow\n\nOperating cash flow was $640 million. Capital spending climbed 13.9% to $410 million as the company rebuilt transmission lines and added solar capacity, leaving free cash flow of $230 million, up 9.5%.\n\n| Metric | Q3 2025 | Q3 2026 | Change |\n|---|---:|---:|---:|\n| Operating cash flow | $570M | $640M | +12.3% |\n| Capital spending | $360M | $410M | +13.9% |\n| Free cash flow | $210M | $230M | +9.5% |\n\n## Takeaways\n\n- The mix is improving: more of the profit now comes from higher-margin renewables.\n- Capital spending is growing nearly as fast as cash flow, so free cash flow improves only slowly.\n- Exiting low-margin services work shrinks revenue in that segment but helps profitability.\n- Next quarter: whether solar additions keep renewables growth above 30%."
+  },
+  {
    "slug": "2026-10-05-harbor-pine-outfitters-fy2025",
    "title": "Harbor & Pine Outfitters: FY2025 Financial Breakdown",
    "date": "2026-10-05",
