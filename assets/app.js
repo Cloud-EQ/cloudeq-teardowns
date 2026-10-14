@@ -17,8 +17,8 @@
   } catch (e) { /* storage unavailable: follow system theme */ }
 
   document.getElementById("themeBtn").addEventListener("click", function () {
-    var current = root.getAttribute("data-theme") ||
-      (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+    // Light is the default for every visitor; dark is opt-in through the toggle (and remembered).
+    var current = root.getAttribute("data-theme") || "light";
     var next = current === "dark" ? "light" : "dark";
     root.setAttribute("data-theme", next);
     try { localStorage.setItem("theme", next); } catch (e) { /* ignore */ }
@@ -79,7 +79,9 @@
     app.innerHTML =
       '<section class="hero"><h1>' + esc(cfg.title || "") + "</h1><p>" + esc(cfg.tagline || "") + "</p></section>" +
       '<div class="controls">' +
-        '<input id="q" type="search" placeholder="Search companies, tickers, topics…" aria-label="Search articles" value="' + esc(state.q) + '">' +
+        (cfg.showSearch
+          ? '<input id="q" type="search" placeholder="Search companies, tickers, topics…" aria-label="Search articles" value="' + esc(state.q) + '">'
+          : "") +
         (sectors.length
           ? '<select id="sector" aria-label="Filter by sector"><option value="">All sectors</option>' +
             sectors.map(function (s) {
@@ -112,7 +114,8 @@
         '<p class="empty">No articles match your search.</p>';
     }
 
-    document.getElementById("q").addEventListener("input", function (e) { state.q = e.target.value; update(); });
+    var qBox = document.getElementById("q");
+    if (qBox) qBox.addEventListener("input", function (e) { state.q = e.target.value; update(); });
     var sel = document.getElementById("sector");
     if (sel) sel.addEventListener("change", function (e) { state.sector = e.target.value; update(); });
     document.getElementById("chips").addEventListener("click", function (e) {
@@ -180,6 +183,8 @@
         (older ? '<a href="#/article/' + encodeURIComponent(older.slug) + '"><small>← Older</small>' + esc(older.title) + "</a>" : "<span></span>") +
         (newer ? '<a class="next" href="#/article/' + encodeURIComponent(newer.slug) + '"><small>Newer →</small>' + esc(newer.title) + "</a>" : "<span></span>") +
       "</nav>";
+
+    if (window.Charts) Charts.mountAll(app);
   }
 
   /* ---------- Routing ---------- */
